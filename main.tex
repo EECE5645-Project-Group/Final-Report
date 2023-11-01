@@ -11,6 +11,37 @@
 \usepackage{filecontents}
 \usepackage{balance}
 
+\definecolor{bg}{gray}{0.95}
+
+\lstdefinestyle{myBASH}{
+	basicstyle = \footnotesize\ttfamily, % the size of the fonts that are used for the code
+	breaklines = true, % sets automatic line breaking
+	commentstyle = \color{gray},
+	keywordstyle = \color{cyan}, %keyword style
+	language = bash,
+	numbers = left, %where the line numbers are
+	numbersep = 5pt, % how far the line-numbers are from the code
+	backgroundcolor = \color{lightgray!35!white},
+	showstringspaces = false, % underline spaces within strings only
+	stringstyle = \color{magenta},
+	xleftmargin = \parindent,
+}
+
+\lstdefinestyle{myPython}{
+	basicstyle = \footnotesize\ttfamily, % the size of the fonts that are used for the code
+	breaklines = true, % sets automatic line breaking
+	commentstyle = \color{gray},
+	keywordstyle = \color{cyan}, %keyword style
+	language = python,
+	numbers = left, %where the line numbers are
+	numbersep = 5pt, % how far the line-numbers are from the code
+	backgroundcolor = \color{lightgray!35!white},
+	showstringspaces = false, % underline spaces within strings only
+	stringstyle = \color{magenta},
+	xleftmargin = \parindent,
+}
+
+
 \begin{document}
 
 \makeatletter
@@ -33,7 +64,37 @@
 \input{authors}
 
 \maketitle
+\thispagestyle{empty}
+\pagestyle{empty}
 
+\input{Sections/abstract}
 
+\section{Introduction}
+\input{Sections/introduction}
 
+\section{Background}
+\input{Sections/background}
+
+\section{Methodology}
+\input{Sections/methods}
+
+\section{Results \& Discussion}
+\input{Sections/results_discussion}
+
+\section{Related Work}
+\input{Sections/related_work}
+
+\section{Future Work}
+\input{Sections/future_work}
+
+\section{Conclusion}
+\input{Sections/conclusion}
+
+\bibliographystyle{IEEEtran}
+\bibliography{references}
+
+\newpage
+\onecolumn
+\appendix
+\input{Sections/appendix}
 \end{document}
