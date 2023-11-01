@@ -1,0 +1,39 @@
+\documentclass[conference, 11pt]{IEEEtran}
+
+\usepackage[labelfont=bf]{caption} 
+\captionsetup{labelfont=bf}
+\usepackage{tcolorbox}
+\usepackage{minted}
+\usepackage{xcolor} % to access the named colour LightGray
+\definecolor{LightGray}{gray}{0.9}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{filecontents}
+\usepackage{balance}
+
+\begin{document}
+
+\makeatletter
+\newcommand{\linebreakand}{
+  \end{@IEEEauthorhalign}
+  \hfill\mbox{}\par
+  \mbox{}\hfill\begin{@IEEEauthorhalign}
+}
+\makeatother
+\makeatletter
+\patchcmd{\@maketitle}
+  {\addvspace{0.5\baselineskip}\egroup}
+  {\addvspace{-1\baselineskip}\egroup}
+  {}
+  {}
+\makeatother
+
+\title{Federated CNNs for Diabetic Retinopathy Classification on Edge Devices}
+
+\input{authors}
+
+\maketitle
+
+
+
+\end{document}
